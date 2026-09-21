@@ -1,0 +1,10 @@
+{
+  "description": "Streamline hotel bookings with an intuitive platform for users and admins, offering easy reservations, management tools, and real-time availability.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
