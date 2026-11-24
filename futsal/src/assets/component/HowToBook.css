@@ -7,7 +7,6 @@
 }
 
 /* TOP */
-
 .booking-top {
   display: flex;
   justify-content: space-between;
@@ -19,7 +18,6 @@
 }
 
 /* HEADING */
-
 .booking-heading {
   display: flex;
   justify-content: space-between;
@@ -46,8 +44,7 @@
   margin-bottom: 5px;
 }
 
-/* CARDS */
-
+/* ALL THREE CARDS */
 .booking-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,25 +52,24 @@
 }
 
 .booking-card {
-  background: #f4f3eb;
+  background: #d5ff60;
   color: #102f27;
   padding: 25px;
   min-height: 215px;
+
   display: flex;
   flex-direction: column;
+
   transition: transform 0.3s ease,
-              background 0.3s ease;
+              box-shadow 0.3s ease;
 }
 
 .booking-card:hover {
   transform: translateY(-8px);
-  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
-.booking-card.highlight-card {
-  background: #d5ff60;
-}
-
+/* CARD TOP */
 .booking-card-top {
   display: flex;
   justify-content: space-between;
@@ -84,47 +80,38 @@
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 55px;
   font-weight: 900;
-  color: #92ae42;
-}
-
-.highlight-card .booking-number {
   color: #102f27;
 }
 
 .booking-arrow {
   font-size: 27px;
   font-weight: bold;
+  color: #102f27;
 }
 
+/* CARD DIVIDER */
 .booking-card-line {
   height: 1px;
-  background: #d0d6c9;
+  background: #a8c94a;
   margin: 12px 0 20px;
 }
 
-.highlight-card .booking-card-line {
-  background: #a8c94a;
-}
-
+/* CARD TEXT */
 .booking-card h3 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 12px;
+  color: #102f27;
 }
 
 .booking-card p {
   font-size: 14px;
   line-height: 1.6;
-  color: #647168;
-}
-
-.highlight-card p {
   color: #40532c;
 }
 
 /* BOTTOM */
-
 .booking-bottom {
   display: flex;
   justify-content: space-between;
@@ -138,7 +125,6 @@
 }
 
 /* TABLET */
-
 @media (max-width: 800px) {
   .booking-heading {
     flex-direction: column;
@@ -160,7 +146,6 @@
 }
 
 /* MOBILE */
-
 @media (max-width: 600px) {
   .booking-process {
     padding: 40px 20px;

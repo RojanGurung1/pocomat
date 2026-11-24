@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import FutsalShowcase from "./assets/component/FutsalShowcase";
 import HowToBook from "./assets/component/HowToBook";
+import Features from "./assets/component/features";
+
 const features = [
   {
     number: "01",
@@ -9,7 +11,7 @@ const features = [
     label: "ARTIFICIAL GRASS",
     description:
       "That familiar underfoot feel. Soft artificial grass with rubber infill, made for confident touches and big plays.",
-    image: "/images/turf.jpg",
+    image: "/bash.jpg",
   },
   {
     number: "02",
@@ -17,7 +19,7 @@ const features = [
     label: "PLAY ANYTIME",
     description:
       "Enjoy exciting football matches with bright floodlights and an energetic atmosphere, even after sunset.",
-    image: "/images/night-game.jpg",
+    image: "/bleh.jpg",
   },
   {
     number: "03",
@@ -25,15 +27,15 @@ const features = [
     label: "PLAYER EXPERIENCE",
     description:
       "Enjoy a clean, organized and player-friendly environment with facilities that make every visit better.",
-    image: "/images/facilities.jpg",
+    image: "/beh.jpg",
   },
 ];
 
 function App() {
   return (
-    <div className="website">
+      <div className="website">
 
-      {/* NAVIGATION */}
+      {/* NAVBAR */}
       <nav className="navbar">
         <div className="logo">
           <h1>Ritik</h1>
@@ -51,11 +53,8 @@ function App() {
         </a>
       </nav>
 
-
-      {/* SECTION 01 - HERO */}
+      {/* HERO SECTION */}
       <section className="hero" id="courts">
-
-        <div className="hero-overlay"></div>
 
         <div className="hero-content">
 
@@ -66,12 +65,12 @@ function App() {
           <h2>
             YOUR SQUAD.
             <br />
-            <span>YOUR GROUND.</span>
+            <span>YOUR GROUND</span>
           </h2>
 
           <p className="description">
             Big energy. Better football. Get your team together
-            <br className="desktop-break" />
+            <br />
             on grass turf or rubber courts, the Nepal way.
           </p>
 
@@ -86,55 +85,44 @@ function App() {
           </div>
 
           <div className="hero-info">
-            <span className="lime-text">
-              02 / COURT SURFACES
-            </span>
-
-            <span>
-              5-A-SIDE / ALL HEART
-            </span>
+            <span>03 / COURT SURFACES</span>
+            <span>5-A-SIDE / ALL HEART</span>
           </div>
 
         </div>
 
-        <div className="hero-caption">
-          BUILT FOR THE BEAUTIFUL GAME.
-        </div>
+        {/* IMAGE COLLAGE */}
+        <div className="hero-gallery">
 
-      </section>
-
-
-      {/* SECTION 02 - THREE FEATURES */}
-      <section className="features-section" id="experience">
-
-        <div className="features-header">
-
-          <div>
-            <p className="features-eyebrow">
-              01 / WHY PLAY WITH US
-            </p>
-
-            <h2>
-              MORE THAN JUST A GAME.
-            </h2>
+          <div className="hero-image image-one">
+            <img src="/bash.jpg" alt="Outdoor futsal ground" />
           </div>
 
-          <p className="features-intro">
-            Everything you need for a better
-            futsal experience.
-            <br />
-            Bring your squad. Bring your game.
+          <div className="hero-image image-two">
+            <img src="/beh.jpg" alt="Futsal court" />
+          </div>
+
+          <div className="hero-image image-three">
+            <img src="/bleh.jpg" alt="Night futsal ground" />
+          </div>
+
+          <p className="gallery-caption">
+            BUILT FOR THE BEAUTIFUL GAME.
           </p>
 
         </div>
 
-      </section>
+      </section>  
       <section>
         <FutsalShowcase />
       </section>
       <section>
         <HowToBook />
       </section>
+      <section>
+        <Features />
+      </section>
+     
 
       {/* FOOTER */}
       <footer className="footer">
