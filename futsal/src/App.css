@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #303030;
+  font-family: 'DM Sans', sans-serif;
+  color: white;
+}
+
+.website {
+  width: calc(100% - 44px);
+  max-width: 1600px;
+  min-height: calc(100vh - 28px);
+  margin: 14px auto;
+  overflow-x: clip;
+  background: #f5f5ed;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 66px;
+  width: 100%;
+  padding: 0 4.4%;
+  background: #f5f5ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #092c25;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo h1 {
+  font-size:40px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.logo span {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 58px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #102d27;
+  font-size: 12px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #9ccf28;
+}
+
+.book-btn {
+  background: #092c25;
+  color: white;
+  text-decoration: none;
+  padding: 14px 15px;
+  width: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #234c3b;
+}
+
+.book-btn span {
+  font-size: 17px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 94px);
+  min-height: 505px;
+  position: relative;
+
+  background-image: url('/futsal-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 35, 27, 0.96) 0%,
+      rgba(0, 35, 27, 0.83) 33%,
+      rgba(0, 35, 27, 0.36) 65%,
+      rgba(0, 20, 15, 0.12) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 43px 4.4% 30px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #d5ff60;
+  font-size: 9px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.hero h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(65px, 7.5vw, 86px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero h2 span {
+  color: #d5ff60;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.find-btn {
+  background: #d5ff60;
+  color: #092c25;
+  padding: 12px 14px;
+  width: 146px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.find-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.find-btn span {
+  font-size: 17px;
+  
+}
+
+.explore-btn {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  color: #d5ff60;
+}
+
+.explore-btn span {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+/* BOTTOM INFORMATION */
+
+.hero-info {
+  width: 43%;
+  max-width: 400px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin-top: 39px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.lime-text {
+  color: #d5ff60;
+}
+
+.hero-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 37px;
+  right: 17%;
+  font-size: 8px;
+  font-weight: 800;
+  color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .website {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+
+  .hero {
+    height: calc(100vh - 75px);
+    min-height: 580px;
+    background-size: cover;
+    background-position: 60% center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 580px;
+    height: auto;
+    background-position: 60% center;
+  }
+}
+
+
+/* =================================
+   FEATURES SECTION
+================================= */
+
+
+
+/* =================================
+   BOOKING SECTION
+================================= */
+
+.booking-section {
+  background: #092c25;
+  color: white;
+  padding: 75px 4.4%;
+}
+
+.booking-eyebrow {
+  color: #d5ff60;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.booking-section h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(55px, 7vw, 85px);
+  font-weight: 900;
+  line-height: 0.98;
+  margin-bottom: 20px;
+}
+
+.booking-section p:not(.booking-eyebrow) {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #d5ded8;
+}
+
+.booking-button {
+  display: inline-block;
+  background: #d5ff60;
+  color: #092c25;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 15px 22px;
+  transition: 0.3s;
+}
+
+.booking-button:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+  background: #f4f3eb;
+  color: #102f27;
+  padding: 30px 4.4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer h2 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.footer p,
+.footer span {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+  .features-grid {
+    gap: 14px;
+  }
+
+  .feature-image {
+    height: 190px;
+  }
+
+  .feature-title-row h3 {
+    font-size: 23px;
+  }
+
+  .features-intro {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .features-section {
+    padding: 45px 20px;
+  }
+
+  .features-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .features-header h2 {
+    font-size: 39px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .feature-image {
+    height: 240px;
+  }
+
+  .feature-description {
+    min-height: auto;
+  }
+
+  .booking-section {
+    padding: 55px 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
