@@ -1,5 +1,3 @@
-
-import React from "react";
 import "./HowToBook.css";
 
 const steps = [
@@ -22,10 +20,10 @@ const steps = [
 
 function HowToBook() {
   return (
-    <section className="booking-process" id="how-to-book">
+    <section className="booking-process" id="booking">
       <div className="booking-card-line"></div>
       <div className="booking-top">
-        <span>03 / HOW TO PLAY</span>
+        <span>02 / HOW TO PLAY</span>
         <span>RITIK FUTSAL CLUB</span>
       </div>
 

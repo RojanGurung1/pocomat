@@ -1,5 +1,3 @@
-
-import React from "react";
 import "./FutsalShowcase.css";
 
 const futsalFeatures = [
@@ -34,7 +32,7 @@ function FutsalShowcase() {
 
       {/* SECTION HEADING */}
       <div className="showcase-heading">
-        <p>02 / THE RITIK EXPERIENCE</p>
+        <p>01 / THE RITIK EXPERIENCE</p>
 
         <h2>BUILT FOR THE LOVE OF THE GAME.</h2>
       </div>
@@ -63,12 +61,11 @@ function FutsalShowcase() {
 
       </div>
      
-      {/* BOTTOM TEXT
+      {/* BOTTOM TEXT */}
       <div className="showcase-footer">
         <span>RITIK FUTSAL CLUB</span>
         <span>FIVE-A-SIDE / ALL HEART</span>
       </div>
-       */}
     </section>
   );
 }

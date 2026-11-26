@@ -1,35 +1,7 @@
-import React from "react";
 import "./App.css";
 import FutsalShowcase from "./assets/component/FutsalShowcase";
 import HowToBook from "./assets/component/HowToBook";
 import Features from "./assets/component/features";
-
-const features = [
-  {
-    number: "01",
-    title: "THE GRASS GAME",
-    label: "ARTIFICIAL GRASS",
-    description:
-      "That familiar underfoot feel. Soft artificial grass with rubber infill, made for confident touches and big plays.",
-    image: "/bash.jpg",
-  },
-  {
-    number: "02",
-    title: "NIGHT GAMES",
-    label: "PLAY ANYTIME",
-    description:
-      "Enjoy exciting football matches with bright floodlights and an energetic atmosphere, even after sunset.",
-    image: "/bleh.jpg",
-  },
-  {
-    number: "03",
-    title: "GREAT FACILITIES",
-    label: "PLAYER EXPERIENCE",
-    description:
-      "Enjoy a clean, organized and player-friendly environment with facilities that make every visit better.",
-    image: "/beh.jpg",
-  },
-];
 
 function App() {
   return (
@@ -53,6 +25,8 @@ function App() {
         </a>
       </nav>
 
+      {/* HERO SECTION */}
+     
       {/* HERO SECTION */}
       <section className="hero" id="courts">
 
@@ -84,11 +58,12 @@ function App() {
             </a>
           </div>
 
-          <div className="hero-info">
-            <span>03 / COURT SURFACES</span>
-            <span>5-A-SIDE / ALL HEART</span>
-          </div>
+        </div>
 
+        {/* HERO BOTTOM LINE */}
+        <div className="hero-info">
+          <span>03 / COURT SURFACES</span>
+          <span>5-A-SIDE / ALL HEART</span>
         </div>
 
         {/* IMAGE COLLAGE */}
@@ -112,7 +87,8 @@ function App() {
 
         </div>
 
-      </section>  
+      </section>
+
       <section>
         <FutsalShowcase />
       </section>
@@ -125,11 +101,24 @@ function App() {
      
 
       {/* FOOTER */}
-      <footer className="footer">
-        <h2>Ritik</h2>
-        <p>FUTSAL CLUB · FIVE-A-SIDE / ALL HEART</p>
-        <span>© 2026 Ritik Futsal Club. All rights reserved.</span>
-      </footer>
+      
+        <footer className="simple-footer">
+
+        <div className="footer-logo">
+          <h2>Ritik</h2>
+          <span>FUTSAL CLUB</span>
+        </div>
+
+        <div className="footer-copyright">
+          © 2026 Ritik Futsal Club. All rights reserved.
+        </div>
+
+        <div className="footer-tagline">
+          FIVE-A-SIDE / ALL HEART
+        </div>
+
+        </footer>
+
 
     </div>
   );

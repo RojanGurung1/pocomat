@@ -44,7 +44,7 @@
 .features-header h2 {
   max-width: 850px;
   font-size: clamp(45px, 6.5vw, 88px);
-  font-weight: 950;
+  font-weight: 900;
   line-height: 0.98;
   letter-spacing: -4px;
   color: #000;

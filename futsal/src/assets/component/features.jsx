@@ -1,15 +1,13 @@
-
-import React from "react";
 import "./features.css";
 
 function Features() {
   return (
-    <section className="features-section" id="experience">
+    <section className="features-section" id="why-us">
       <div className="features-header">
 
         <div>
           <p className="features-eyebrow">
-            01 / WHY PLAY WITH US
+            03 / WHY PLAY WITH US
           </p>
 
           <h2>
