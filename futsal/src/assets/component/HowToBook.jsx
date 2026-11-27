@@ -42,11 +42,8 @@ function HowToBook() {
 
       <div className="booking-cards">
 
-        {steps.map((step, index) => (
-          <div
-            className={`booking-card ${index === 2 ? "highlight-card" : ""}`}
-            key={step.number}
-          >
+        {steps.map((step) => (
+          <div className="booking-card" key={step.number}>
             <div className="booking-card-top">
               <span className="booking-number">
                 {step.number}
@@ -65,7 +62,7 @@ function HowToBook() {
 
       </div>
 
-      <div className="booking-bottom">
+      <div className="section-bottom-bar booking-bottom">
         <span>LESS PLANNING. MORE PLAYING.</span>
         <span>FIVE-A-SIDE / ALL HEART</span>
       </div>

@@ -64,22 +64,31 @@
 
 @media (max-width: 768px) {
   .features-section {
-    padding: 75px 6%;
+    padding: 60px 6%;
     min-height: auto;
   }
 
   .features-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 24px;
+  }
+
+  .features-eyebrow {
+    font-size: 11px;
+    margin-bottom: 16px;
   }
 
   .features-header h2 {
-    font-size: 45px;
-    letter-spacing: -2px;
+    font-size: clamp(34px, 9vw, 48px);
+    letter-spacing: -1.5px;
   }
 
   .features-intro {
     max-width: 100%;
+    width: 100%;
+    padding: 18px;
+    font-size: 15px;
+    line-height: 1.7;
   }
 }

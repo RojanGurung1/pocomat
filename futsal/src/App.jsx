@@ -1,9 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 import FutsalShowcase from "./assets/component/FutsalShowcase";
 import HowToBook from "./assets/component/HowToBook";
 import Features from "./assets/component/features";
 
+const NAV_LINKS = [
+  { href: "#courts", label: "Our courts" },
+  { href: "#experience", label: "The experience" },
+  { href: "#booking", label: "How to book" },
+];
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
       <div className="website">
 
@@ -15,17 +26,46 @@ function App() {
         </div>
 
         <div className="nav-links">
-          <a href="#courts">Our courts</a>
-          <a href="#experience">The experience</a>
-          <a href="#booking">How to book</a>
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </div>
 
-        <a href="#booking" className="book-btn">
-          Book a court <span>↗</span>
-        </a>
+        <div className="nav-actions">
+          <a href="#booking" className="book-btn">
+            Book a court <span>↗</span>
+          </a>
+
+          <button
+            type="button"
+            className={`menu-toggle ${menuOpen ? "open" : ""}`}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </nav>
 
-      {/* HERO SECTION */}
+      {/* MOBILE DRAWER */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} onClick={closeMenu}>
+              {link.label}
+            </a>
+          ))}
+          <a href="#booking" className="mobile-book-btn" onClick={closeMenu}>
+            Book a court <span>↗</span>
+          </a>
+        </div>
+      )}
+
      
       {/* HERO SECTION */}
       <section className="hero" id="courts">
@@ -61,7 +101,7 @@ function App() {
         </div>
 
         {/* HERO BOTTOM LINE */}
-        <div className="hero-info">
+        <div className="section-bottom-bar hero-info">
           <span>03 / COURT SURFACES</span>
           <span>5-A-SIDE / ALL HEART</span>
         </div>
@@ -89,15 +129,9 @@ function App() {
 
       </section>
 
-      <section>
-        <FutsalShowcase />
-      </section>
-      <section>
-        <HowToBook />
-      </section>
-      <section>
-        <Features />
-      </section>
+      <FutsalShowcase />
+      <HowToBook />
+      <Features />
      
 
       {/* FOOTER */}
